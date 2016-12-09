@@ -361,11 +361,11 @@
                         </Line.RenderTransform>
                     </Line>
 
-                    <TextBlock Text="{Binding Divisions[0]}" FontSize="8" Margin="20 40 0 0"/>
-                    <TextBlock Text="{Binding Divisions[1]}" FontSize="8" Margin="22 25 0 0"/>
+                    <!--<TextBlock Text="{Binding Divisions[0]}" FontSize="8" Margin="20 40 0 0"/>
+                    <TextBlock Text="{Binding Divisions[1]}" FontSize="8" Margin="22 25 0 0"/>-->
                     <TextBlock Text="{Binding Divisions[2]}" FontSize="8" HorizontalAlignment="Center" Margin="0 20 0 0"/>
-                    <TextBlock Text="{Binding Divisions[3]}" FontSize="8" HorizontalAlignment="Right" Margin="0 25 25 0"/>
-                    <TextBlock Text="{Binding Divisions[4]}" FontSize="8" HorizontalAlignment="Right" Margin="0 40 22 0"/>
+                    <!--<TextBlock Text="{Binding Divisions[3]}" FontSize="8" HorizontalAlignment="Right" Margin="0 25 25 0"/>
+                    <TextBlock Text="{Binding Divisions[4]}" FontSize="8" HorizontalAlignment="Right" Margin="0 40 22 0"/>-->
                 </Grid>
 
                 <Line X1="40" Y1="40" X2="40" Y2="15" Stroke="Blue" StrokeThickness="1" RenderTransformOrigin=".5 .5">
