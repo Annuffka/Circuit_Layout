@@ -1,0 +1,72 @@
+﻿<Window x:Class="Circuit_Layout.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Circuit_Layout"
+        xmlns:res="clr-namespace:Circuit_Layout.Properties"
+        Title="Circuit Layout" Height="650" Width="1000" MinHeight="500" MinWidth="800" KeyDown="Window_KeyDown" WindowStartupLocation="CenterScreen" Background="#385f0a" Icon="../Resources/icon.ico" >
+
+    <DockPanel>
+        <Menu IsMainMenu="True" DockPanel.Dock="Top">
+            <MenuItem Header="{x:Static res:Resources.mw_mm_file}">
+                <MenuItem Header="{x:Static res:Resources.mw_mm_file_save}" Click="MenuItemSave_Click">
+                    <MenuItem.Icon>
+                        <Image Width="15" Height="15" Source="../Resources/save.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="{x:Static res:Resources.mw_mm_file_saveas}" Click="MenuItemSaveAs_Click">
+                    <MenuItem.Icon>
+                        <Image Width="15" Height="15" Source="../Resources/save.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="{x:Static res:Resources.mw_mm_file_load}" Click="MenuItemLoad_Click">
+                    <MenuItem.Icon>
+                        <Image Width="15" Height="15" Source="../Resources/load.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="{x:Static res:Resources.mw_mm_file_print}" Click="MenuItemPrint_Click">
+                    <MenuItem.Icon>
+                        <Image Width="15" Height="15" Source="../Resources/print.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="{x:Static res:Resources.mw_mm_layout}">
+                <MenuItem Header="{x:Static res:Resources.mw_mm_layout_clearlayout}" Click="MenuItem_ClearLayout_Click">
+                    <MenuItem.Icon>
+                        <Image Width="15" Height="15" Source="../Resources/close.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="{x:Static res:Resources.mw_mm_layout_rxresistance}" Click="MenuItemRxResistance_Click">
+                    <MenuItem.Icon>
+                        <Image Width="15" Height="15" Source="../Resources/Rx Resistance.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="{x:Static res:Resources.mw_mm_exercises}" Name="miMenuExercises">
+            </MenuItem>
+            <MenuItem Header="{x:Static res:Resources.mw_mm_help}">
+                <MenuItem Header="{x:Static res:Resources.mw_mm_help_showhelp}" Click="MenuItem_ShowHelp_Click">
+                    <MenuItem.Icon>
+                        <Image Width="15" Height="15" Source="../Resources/help.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="{x:Static res:Resources.mw_mm_help_about}" Click="MenuItem_ShowAbout_Click">
+                    <MenuItem.Icon>
+                        <Image Width="15" Height="15" Source="../Resources/about.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <Grid Margin="5">
+            <TabControl Background="#9acf5c" Name="tcMainTabControl">
+                <TabItem Header="{x:Static res:Resources.mw_tc_layout}" Background="#c4e48b" >
+                    <local:CircuitLayoutControl x:Name="clcLayout"/>
+                </TabItem>
+                <TabItem Header="{x:Static res:Resources.mw_tc_formalization}" Background="#c4e48b">
+                    <local:TaskControl x:Name="clcFormalisation"/>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </DockPanel>
+</Window>

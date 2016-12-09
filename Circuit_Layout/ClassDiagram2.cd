@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Circuit_Layout.TaskManager" Collapsed="true">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Circuit_Layout.TaskManager.XMLValidationException" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>TaskManager\TaskManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="Circuit_Layout.TaskManager.XMLFileOpenSaveException" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>TaskManager\TaskManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ACIUkIAgACAAACAAEAECEBEAjBDMEAAAAEAAAQiQAAg=</HashCode>
+      <FileName>TaskManager\TaskManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Diagrams" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Circuit_Layout.Diagram" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="1.25" Width="1.5" />
+    <AssociationLine Name="SignaturesVertical" Type="Circuit_Layout.DiagramSignature">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.2" Y="0.204" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="SignaturesHorisontal" Type="Circuit_Layout.DiagramSignature">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.04" Y="0.194" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Points" Type="Circuit_Layout.DiagramPoint" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.062" Y="1.812" />
+        <Point X="6.062" Y="2.562" />
+        <Point X="8.5" Y="2.562" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.06" Y="0.954" Height="0.182" Width="1.373" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>MIJwAABwgAAAwAAAAAAAAAAAgAAEAAgIAAAAAAAAAAA=</HashCode>
+      <FileName>TaskManager\TaskElements.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="SignaturesVertical" />
+      <Property Name="SignaturesHorisontal" />
+      <Property Name="Points" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Circuit_Layout.DiagramSignature" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="1.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAgAAAAIAAAgAAEAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>TaskManager\TaskElements.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Circuit_Layout.DiagramPoint" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="2.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAEAAAAAAAAAAAAAgCAEAAAAAABgAAAAYAA=</HashCode>
+      <FileName>TaskManager\TaskElements.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Circuit_Layout.TableCell" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAABAAAAAAAAAAAAAgAAEABgAgEAAAAAAAACAAAAAA=</HashCode>
+      <FileName>TaskManager\TaskElements.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

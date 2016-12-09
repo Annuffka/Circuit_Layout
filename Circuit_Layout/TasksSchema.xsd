@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="tasks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="task" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name"/>
+              <xs:element name="table">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="column" minOccurs="1" maxOccurs="15">
+                      <xs:complexType mixed="true">
+                        <xs:attribute name="ai" type="xs:boolean" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="tests" use="required" type="xs:int"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="diagrams" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="diagram" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="x">
+                            <xs:complexType>
+                              <xs:attribute name="column" type="xs:int" use="required"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="y">
+                            <xs:complexType>
+                              <xs:attribute name="column" type="xs:int" use="required"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="solution">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="line" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType mixed="true">
+                        <xs:choice minOccurs="1" maxOccurs="unbounded">
+                          <xs:element name="text" type="xs:string"/>
+                          <xs:element name="field">
+                            <xs:complexType>
+                              <xs:attribute name="name" type="xs:string"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:choice>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="checker" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="value" type="xs:string"/>
+                          <xs:element name="mean" type="xs:string"/>
+                          <xs:element name="fault" type="xs:string"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="description" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="number" use="required" type="xs:string"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

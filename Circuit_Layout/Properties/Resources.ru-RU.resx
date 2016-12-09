@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cc_cb_run" xml:space="preserve">
+    <value>Запустить симуляцию</value>
+  </data>
+  <data name="cc_cd_chains" xml:space="preserve">
+    <value>НЕРАЗВЕТВЛЯЮЩИЕСЯ ЦЕПИ:</value>
+  </data>
+  <data name="cc_cd_contours" xml:space="preserve">
+    <value>КОНТУРЫ:</value>
+  </data>
+  <data name="cc_cd_equations" xml:space="preserve">
+    <value>УРАВНЕНИЯ:</value>
+  </data>
+  <data name="cc_cd_rule1count" xml:space="preserve">
+    <value>Уравнений по I правилу Кирхгофа:</value>
+  </data>
+  <data name="cc_cd_rule2count" xml:space="preserve">
+    <value>Уравнений по II правилу Кирхгофа:</value>
+  </data>
+  <data name="cc_cm_edit" xml:space="preserve">
+    <value>Изменить</value>
+  </data>
+  <data name="cc_cm_remove" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="cc_connector_cm_remove" xml:space="preserve">
+    <value>Удалить соединитель</value>
+  </data>
+  <data name="cc_ex_kramercounterexception" xml:space="preserve">
+    <value>Расчёт тока невозможен</value>
+  </data>
+  <data name="cc_ex_layoutsimexception" xml:space="preserve">
+    <value>Ошибка симуляции</value>
+  </data>
+  <data name="cc_ex_xresistorisplaced" xml:space="preserve">
+    <value>Резистор Rx уже присутствует на схеме</value>
+  </data>
+  <data name="ew_bt_cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="ew_bt_ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ew_displatvoltage" xml:space="preserve">
+    <value>Показать напряжение:</value>
+  </data>
+  <data name="ew_displaymode" xml:space="preserve">
+    <value>Режим отбражения:</value>
+  </data>
+  <data name="ew_displaymode_length" xml:space="preserve">
+    <value>Длина</value>
+  </data>
+  <data name="ew_displaymode_resistance" xml:space="preserve">
+    <value>Сопротивление</value>
+  </data>
+  <data name="ew_division" xml:space="preserve">
+    <value>Цена деления:</value>
+  </data>
+  <data name="ew_editable" xml:space="preserve">
+    <value>Изменяемый:</value>
+  </data>
+  <data name="ew_edit_ampermeter" xml:space="preserve">
+    <value>Амперметр</value>
+  </data>
+  <data name="ew_edit_battery" xml:space="preserve">
+    <value>Элемент питания</value>
+  </data>
+  <data name="ew_edit_potentiometer" xml:space="preserve">
+    <value>Потенциометр</value>
+  </data>
+  <data name="ew_edit_reohord" xml:space="preserve">
+    <value>Реохорд</value>
+  </data>
+  <data name="ew_edit_resistor" xml:space="preserve">
+    <value>Резистор</value>
+  </data>
+  <data name="ew_edit_resistorx" xml:space="preserve">
+    <value>Резистор Rx</value>
+  </data>
+  <data name="ew_emf" xml:space="preserve">
+    <value>ЭДС:</value>
+  </data>
+  <data name="ew_maxresistance" xml:space="preserve">
+    <value>Максимальное сопр.:</value>
+  </data>
+  <data name="ew_name" xml:space="preserve">
+    <value>Название:</value>
+  </data>
+  <data name="ew_resistance" xml:space="preserve">
+    <value>Сопротивление:</value>
+  </data>
+  <data name="ex_error" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="mw_c_savefiles" xml:space="preserve">
+    <value>Файлы сохранений Circuit Layout</value>
+  </data>
+  <data name="mw_ex_errorloadingfile" xml:space="preserve">
+    <value>Ошибка загрузки файла</value>
+  </data>
+  <data name="mw_ex_notaskselected" xml:space="preserve">
+    <value>Задание не выбрано</value>
+  </data>
+  <data name="mw_ex_tasknumberdoesntmatch" xml:space="preserve">
+    <value>Номер загружаемого задания не совпадает с выбранным</value>
+  </data>
+  <data name="mw_mm_exercises" xml:space="preserve">
+    <value>Лабораторные</value>
+  </data>
+  <data name="mw_mm_file" xml:space="preserve">
+    <value>Файл</value>
+  </data>
+  <data name="mw_mm_file_load" xml:space="preserve">
+    <value>Загрузить</value>
+  </data>
+  <data name="mw_mm_file_print" xml:space="preserve">
+    <value>Печатать</value>
+  </data>
+  <data name="mw_mm_file_save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="mw_mm_file_saveas" xml:space="preserve">
+    <value>Сохранить как</value>
+  </data>
+  <data name="mw_mm_help" xml:space="preserve">
+    <value>Справка</value>
+  </data>
+  <data name="mw_mm_help_about" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="mw_mm_help_showhelp" xml:space="preserve">
+    <value>Показать справку</value>
+  </data>
+  <data name="mw_mm_layout" xml:space="preserve">
+    <value>Схема</value>
+  </data>
+  <data name="mw_mm_layout_clearlayout" xml:space="preserve">
+    <value>Очистить схему</value>
+  </data>
+  <data name="mw_mm_layout_rxresistance" xml:space="preserve">
+    <value>Показать сопротивление Rx</value>
+  </data>
+  <data name="mw_tc_formalization" xml:space="preserve">
+    <value>Формализация</value>
+  </data>
+  <data name="mw_tc_layout" xml:space="preserve">
+    <value>Схема</value>
+  </data>
+  <data name="tc_bt_checkanswer" xml:space="preserve">
+    <value>Проверить результат</value>
+  </data>
+  <data name="tc_bt_updatediagrams" xml:space="preserve">
+    <value>Обновить диаграммы</value>
+  </data>
+  <data name="tc_c_formalization_print" xml:space="preserve">
+    <value>Печать формализации</value>
+  </data>
+  <data name="aw_anufriev" xml:space="preserve">
+    <value>- Ануфриев Юрий Андреевич</value>
+  </data>
+  <data name="aw_danilov" xml:space="preserve">
+    <value>- Данилов Максим Алексеевич</value>
+  </data>
+  <data name="aw_dev" xml:space="preserve">
+    <value>Команда разработчиков:</value>
+  </data>
+  <data name="aw_nazarova" xml:space="preserve">
+    <value>- Назарова Анна Васильевна</value>
+  </data>
+  <data name="aw_sorvanova" xml:space="preserve">
+    <value>- Сорванова Анна Константиновна</value>
+  </data>
+  <data name="aw_title" xml:space="preserve">
+    <value>О программе Circuit Layout</value>
+  </data>
+  <data name="cc_cb_stop" xml:space="preserve">
+    <value>Остановить симуляцию</value>
+  </data>
+</root>
