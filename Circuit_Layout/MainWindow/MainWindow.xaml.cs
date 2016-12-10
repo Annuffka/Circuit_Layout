@@ -35,6 +35,10 @@ namespace Circuit_Layout
                 MessageBox.Show( ex.Message, Properties.Resources.ex_error, MessageBoxButton.OK, MessageBoxImage.Error );
                 this.Close();
             }
+            catch (FileNotFoundException ex)
+            {
+                MessageBox.Show( ex.Message, Properties.Resources.ex_error, MessageBoxButton.OK, MessageBoxImage.Error );
+            }
             clcLayout.Owner = this;
             miMenuExercises.ItemsSource = tm.TasksMenu;
         }

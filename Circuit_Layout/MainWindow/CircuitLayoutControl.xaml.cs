@@ -128,7 +128,6 @@ namespace Circuit_Layout
         }
         #endregion
         #region SelectElement
-        private Vector offsetClickVector;
         private Element movingElement;
         private void Element_MouseDown( object sender, MouseButtonEventArgs e )
         {
@@ -140,7 +139,6 @@ namespace Circuit_Layout
 
             if ( e.LeftButton == MouseButtonState.Pressed )
             {
-                offsetClickVector = new Point( element.X, element.Y ) - e.GetPosition( icLayout );
                 movingElement = movingElement == null ? element : null;
                 e.Handled = true;
             }
@@ -152,7 +150,7 @@ namespace Circuit_Layout
             if ( movingElement == null )
                 return;
 
-            Point position = e.GetPosition( icLayout ) + offsetClickVector;
+            Point position = e.GetPosition( icLayout );
 
             double width = Math.Abs( movingElement.OffsetB * Math.Cos( movingElement.Angle * Math.PI / 180 ) );
             double height = Math.Abs( movingElement.OffsetB * Math.Sin( movingElement.Angle * Math.PI / 180 ) );

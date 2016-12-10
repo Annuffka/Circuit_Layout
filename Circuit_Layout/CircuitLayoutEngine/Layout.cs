@@ -238,15 +238,19 @@ namespace Circuit_Layout
         {
             ResetNodesState();                                                                      // Сброс состояния нод, присвоение им номеров
 
-            ChainsSerach();                                                                         // Получаем список цепей
-            UpdateChainNumbers();
+            foreach ( Connector connector in Connectors )
+            {
+                if ( connector.NodeA.Connections.Count == 1 && connector.NodeB.Connections.Count > 1 ||
+                    connector.NodeA.Connections.Count > 1 && connector.NodeB.Connections.Count == 1 )
+                {
+                    throw new WrongSchemeException( "Unconnected pin found!" );
+                }
+            }
+
             ContoursSearch();                                                                       // Получаем список замкнутых контуров
 
             if ( Contours.Count < 1 )
                 return;
-
-            if ( Contours.Count > 15 )
-                throw new WrongSchemeException( "Too difficult" );
 
             if ( Contours.Count == 1 )
             {
@@ -261,14 +265,8 @@ namespace Circuit_Layout
                 return;
             }
 
-            foreach ( Connector connector in Connectors )
-            {
-                if ( connector.NodeA.Connections.Count == 1 && connector.NodeB.Connections.Count > 1 ||
-                    connector.NodeA.Connections.Count > 1 && connector.NodeB.Connections.Count == 1 )
-                {
-                    throw new WrongSchemeException( "Unconnected pin found!" );
-                }
-            }
+            ChainsSerach();                                                                         // Получаем список цепей
+            UpdateChainNumbers();
 
             Rule1Count = Nodes.Count( i => i.Connections.Count > 2 ) - 1;                       // Количество уравнений по первому правилу
             int matrixSize = Chains.Count;                                                          // Размер матрицы (количество неизвестных)
@@ -373,8 +371,12 @@ namespace Circuit_Layout
             else if ( contour.Count >= 2 )
             {
                 if ( isContourFree( contour ) )                 // Проверяем, существует ли эта цепь
+                {
                     Contours.Add( contour );
-                return;
+                    if ( Contours.Count > 15 )
+                        throw new WrongSchemeException( "Too difficult" );
+                    return;
+                }
             }
             for ( int w = 0; w < Connectors.Count; w++ )
             {
