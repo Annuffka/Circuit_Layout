@@ -287,7 +287,7 @@ namespace Circuit_Layout
         {
             if ( cbRun.IsChecked == true )
             {
-                icLayout.Background = new SolidColorBrush( Color.FromRgb( 0x9a, 0xcf, 0x5c ) );
+                icLayout.Background = new SolidColorBrush(Color.FromRgb(0xfa, 0xff, 0xc7));
                 grElements.Visibility = System.Windows.Visibility.Collapsed;
                 brCountData.Visibility = System.Windows.Visibility.Visible;
             }
