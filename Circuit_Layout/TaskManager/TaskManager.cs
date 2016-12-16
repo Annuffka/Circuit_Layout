@@ -15,7 +15,7 @@ namespace Circuit_Layout
     public class TaskManager : INotifyPropertyChanged
     {
         #region Singleton
-        private static TaskManager instance;
+        private static TaskManager instance; //не можем создавать экземпляры класса
         public static TaskManager GetInstance()
         {
             if ( instance == null )
@@ -135,9 +135,9 @@ namespace Circuit_Layout
         #endregion
         #region XML
         #region Tasks
-        public void LoadTasks()                                      // Загрузка XML файла tasks.xml, обновление элемента Exercises и меню Exercises
+        public void LoadTasks()   // Загрузка XML файла tasks.xml, обновление элемента Exercises и меню Exercises
         {
-            Exercises = XDocument.Load( "tasks.xml", LoadOptions.SetBaseUri | LoadOptions.SetLineInfo );        // Обновление документа Exercises
+            Exercises = XDocument.Load( "tasks.xml", LoadOptions.SetBaseUri | LoadOptions.SetLineInfo );  // Обновление документа Exercises
             XmlSchemaSet schema = new XmlSchemaSet();
             schema.Add( "", "TasksSchema.xsd" );
 
@@ -146,20 +146,20 @@ namespace Circuit_Layout
                 throw new XMLValidationException( e.Message );
             } );
 
-            var exercises = Exercises                                                                           // Последовательность заданий для пунктов меню
-                .Descendants( "task" )
+            var exercises = Exercises    // Последовательность заданий для пунктов меню
+                .Descendants( "task" ) // элементы с каждым заданием
                     .Select( i => new
                     {
                         Header = i.Element( "name" ).Value.Trim( '\n', '\t' ),
                         Tag = i.Attribute( "number" ).Value
                     } );
 
-            foreach ( var exercise in exercises )                                                               // Добавление упражнений в меню
+            foreach ( var exercise in exercises ) // Добавление упражнений в меню
             {
                 MenuItem mi = new MenuItem() { Header = exercise.Header, IsCheckable = true };
                 mi.Click += ( sender, e ) =>
                     {
-                        foreach ( MenuItem item in TasksMenu )
+                        foreach ( MenuItem item in TasksMenu ) //убираем галки у всех, кроме выбранного
                             item.IsChecked = mi == item;
 
                         UpdateSelectedTask( exercise.Tag );
@@ -167,7 +167,7 @@ namespace Circuit_Layout
                 TasksMenu.Add( mi );
             }
         }
-        private void DrawInstructions()                             // Отрисовка инструкций к текущему заданию
+        private void DrawInstructions()  // Отрисовка инструкций к текущему заданию
         {
             //Instructions.Clear();
             string instructions = SelectedTask
@@ -176,7 +176,7 @@ namespace Circuit_Layout
             Instructions = ParseToStackPanel( instructions );
             //Instructions = .Add( instructions );
         }
-        private void DrawTaskTable()                                // Отрисовка таблицы из текущего задания
+        private void DrawTaskTable()  // Отрисовка таблицы из текущего задания
         {
             var tableHeaders = SelectedTask
                 .Element( "table" )
@@ -209,7 +209,7 @@ namespace Circuit_Layout
                 DataTable.Add( column );
             }
         }
-        private void DrawDiagrams()                                 // Построение и отрисовка диаграм
+        private void DrawDiagrams()  // Построение и отрисовка диаграм
         {
             Diagrams.Clear();
 

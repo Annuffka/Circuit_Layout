@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -43,7 +40,7 @@ namespace Circuit_Layout
 
             for ( int i = 0; i < SignaturesVertical.Count; i++ )
             {
-                SignaturesVertical[i].Signature = Math.Round( MinX + ddx * i, ddx < 2 ? 2 : 0 );        //Если дельта меньше 2, то округляем до 2 знаков после запятой
+                SignaturesVertical[i].Signature = Math.Round( MinX + ddx * i, ddx < 2 ? 2 : 0 );  //Если дельта меньше 2, то округляем до 2 знаков после запятой
             }
             for ( int i = 0; i < SignaturesHorisontal.Count; i++ )
             {
@@ -154,7 +151,7 @@ namespace Circuit_Layout
                 if ( y != value )
                 {
                     y = value;
-                    Fire( "Y", "YX" );
+                    Fire( "Y", "RY" );
                 }
             }
         }

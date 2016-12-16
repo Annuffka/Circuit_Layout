@@ -24,13 +24,13 @@ namespace Circuit_Layout
         public MainWindow()
         {
             InitializeComponent();
-            TaskManager tm = TaskManager.GetInstance();
+            TaskManager tm = TaskManager.GetInstance(); 
 
             try
             {
                 tm.LoadTasks();
             }
-            catch ( TaskManager.XMLValidationException ex )
+            catch ( TaskManager.XMLValidationException ex ) //ошибка валидации
             {
                 MessageBox.Show( ex.Message, Properties.Resources.ex_error, MessageBoxButton.OK, MessageBoxImage.Error );
                 this.Close();
@@ -39,7 +39,7 @@ namespace Circuit_Layout
             {
                 MessageBox.Show( ex.Message, Properties.Resources.ex_error, MessageBoxButton.OK, MessageBoxImage.Error );
             }
-            clcLayout.Owner = this;
+            clcLayout.Owner = this; 
             miMenuExercises.ItemsSource = tm.TasksMenu;
         }
         #endregion

@@ -45,12 +45,12 @@
             <MenuItem Header="{x:Static res:Resources.mw_mm_exercises}" Name="miMenuExercises">
             </MenuItem>
             <MenuItem Header="{x:Static res:Resources.mw_mm_help}">
-                <MenuItem Header="{x:Static res:Resources.mw_mm_help_showhelp}" Click="MenuItem_ShowHelp_Click">
+                <!--<MenuItem Header="{x:Static res:Resources.mw_mm_help_showhelp}" Click="MenuItem_ShowHelp_Click">
                     <MenuItem.Icon>
                         <Image Width="15" Height="15" Source="../Resources/help.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <Separator/>
+                <Separator/>-->
                 <MenuItem Header="{x:Static res:Resources.mw_mm_help_about}" Click="MenuItem_ShowAbout_Click">
                     <MenuItem.Icon>
                         <Image Width="15" Height="15" Source="../Resources/about.png"/>

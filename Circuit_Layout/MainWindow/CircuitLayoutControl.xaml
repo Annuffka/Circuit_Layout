@@ -93,8 +93,8 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="R=" Style="{StaticResource ElementValuesData}"/>
                         <Grid>
-                            <TextBlock Text="{Binding Resistance}" Style="{StaticResource ElementValuesData}"/>
-                            <TextBox Width="50" Visibility="{Binding EditPartVisibility}" Text="{Binding Resistance}" VerticalAlignment="Center" FontSize="10" IsEnabled="{Binding IsChecked,ElementName=cbRun}" KeyDown="ResistanceTextBox_KeyDown" LostFocus="ResistanceTextBox_LostFocus" />
+                            <TextBlock Text="{Binding Resistance}" Style="{StaticResource ElementValuesData}" Visibility="{Binding NotEditPartVisibility}"/>
+                            <TextBox Width="50" Background="White" Visibility="{Binding EditPartVisibility}" Text="{Binding Resistance}" VerticalAlignment="Center" FontSize="10" IsEnabled="{Binding IsChecked,ElementName=cbRun}" KeyDown="ResistanceTextBox_KeyDown" LostFocus="ResistanceTextBox_LostFocus" />
                         </Grid>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Visibility="{Binding VoltageVisibility}">

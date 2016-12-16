@@ -23,9 +23,13 @@ namespace Circuit_Layout
                 if ( editable != value )
                 {
                     editable = value;
-                    Fire( "EditPartVisibility" );
+                    Fire("EditPartVisibility", "NotEditPartVisibility");
                 }
             }
+        }
+        public System.Windows.Visibility NotEditPartVisibility
+        {
+            get { return !IsEditable ? System.Windows.Visibility.Visible : System.Windows.Visibility.Collapsed; }
         }
         public System.Windows.Visibility EditPartVisibility
         {
